@@ -1,0 +1,31 @@
+<h1>Quick Search</h1>
+
+
+<%= form_for @user, :method => :get, :url => url_for(:controller => 'users', :action => 'search') do |f| %>
+  <%= f.label :location_zip, "Zip Code" %>:
+  <%= f.text_field :zip_code %><br>
+  <%= f.label :subjects, "Subject" %>:
+  <%= f.text_field :subjects %><br>
+  <%= f.submit "Search!" %>
+<% end %>
+<br>
+
+<h5>Login?</h5>
+<h5>Create profile?</h5>
+
+<% if @results %>
+  <h3>Search results</h3>
+  <% @results.each do |result| %>
+  <%= result.first_name %>
+  <%= result.zip_code %>
+  <%= result.rate_min %>
+  <%= result.rate_max %>
+  <% end %>
+
+<% end %>
+
+
+
+
+
+
