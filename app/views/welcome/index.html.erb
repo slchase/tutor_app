@@ -1,5 +1,54 @@
-<p>Start by selecting below</p>
+
+
+
+
+
+<video autoplay  poster="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/polina.jpg" id="bgvid" loop>
+  <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+<source src="//demosthenes.info/assets/videos/polina.webm" type="video/webm">
+<source src="//demosthenes.info/assets/videos/polina.mp4" type="video/mp4">
+</video>
+<div id="polina">
+<h1>Critical Dialogue</h1>
+<p>The hot joga of learning</p>
+
 
 <button id="tutor-btn"><a href="/login">Tutor Access</a></button>
 <button id="student-btn"><a href="/tutor/search">Student Access</a></button>
+
+<!-- <p><a href="//demosthenes.info/blog/777/Create-Fullscreen-HTML5-Page-Background-Video"></a> -->
+
+<!-- <p>The Human in Learning</p>
+<button>Pause</button> -->
+</div>
+
+<script>
+
+var vid = document.getElementById("bgvid");
+var pauseButton = document.querySelector("#polina button");
+
+function vidFade() {
+  vid.classList.add("stopfade");
+}
+
+vid.addEventListener('ended', function()
+{
+// only functional if "loop" is removed
+vid.pause();
+// to capture IE10
+vidFade();
+});
+
+
+pauseButton.addEventListener("click", function() {
+  vid.classList.toggle("stopfade");
+  if (vid.paused) {
+    vid.play();
+    pauseButton.innerHTML = "Pause";
+  } else {
+    vid.pause();
+    pauseButton.innerHTML = "Paused";
+  }
+})
+</script>
 

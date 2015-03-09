@@ -23,6 +23,8 @@ Rails.application.routes.draw do
 
   get "/tutor/search", to: "users#find"
   get "/search", to: "users#search"
+  get "/login", to: "sessions#new"
+  post "login", to: "sessions#create"
 
   # Example resource route with options:
   #   resources :products do

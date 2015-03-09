@@ -11,13 +11,16 @@ class UsersController < ApplicationController
       @results = User.tutor_search(params["user"]["zip_code"])
 
      end
+  end
+
+  def show
+
 
   end
 
   def find
   @user = User.new
   render :search
-
   end
 
 end
