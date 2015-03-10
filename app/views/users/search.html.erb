@@ -1,3 +1,4 @@
+<body>
 <h1>Quick Search</h1>
 
 
@@ -16,13 +17,18 @@
 <% if @results %>
   <h3>Search results</h3>
   <% @results.each do |result| %>
+  <h5><u>Name</u></h5>
   <%= result.first_name %>
+  <h5><u>Location</u><h5>
   <%= result.zip_code %>
+  <h5><u>Minimum rate</u><h5>
   <%= result.rate_min %>
   <%= result.rate_max %>
   <% end %>
 
 <% end %>
+
+<body>
 
 
 
