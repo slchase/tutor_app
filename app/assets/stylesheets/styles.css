@@ -1,24 +1,15 @@
-// Place all the styles related to the welcome controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
 
-/*p {
+body {
+color: black;
+background-color: white;
+font-size: 1.2rem;
+}
+h1 {
+font-size: 1.2rem;
 
-text-align: center;
+  }
 
-}*/
 
-/*#tutor-btn {
-
-  margin-left: 9em;
-}*/
-
-/*body {
-    width:22%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 200px;
-}*/
 #index-page {
   margin: 0;
   background: #000;
