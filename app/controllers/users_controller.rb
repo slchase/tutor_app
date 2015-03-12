@@ -19,8 +19,8 @@ class UsersController < ApplicationController
   end
 
   def find
-  @user = User.new
-  render :search
+    @user = User.new
+    render :search
   end
 
 end

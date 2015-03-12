@@ -11,6 +11,7 @@ class SessionsController < ApplicationController
     user = User.find_by({email: params["email"]})
     if user && user.authenticate(params[:password])
       session[:user_id] = user.id
+    end
     if user.user_type == "Tutor"
         redirect_to user
       elsif user.user_type == "Student"
