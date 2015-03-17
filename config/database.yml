@@ -10,6 +10,7 @@ default: &default
   pool: 5
 
 
+
 development:
   <<: *default
   database: tutorapp_development
